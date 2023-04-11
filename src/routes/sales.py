@@ -13,7 +13,6 @@ salesSchema = SalesSchema(many = True)
 productSchema = ProductSchema()
 
 @salesRoutes.route ('/sales', methods = ['POST'])
-@jwt_required
 def setSale():
     try:
         currentDate = datetime.now()
